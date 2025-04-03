@@ -1,0 +1,57 @@
+.faq-items {
+
+    .accordion-item {
+        border: 0;
+        background-color: transparent;
+        border-radius: 8px;
+        border: 1px solid rgba(56, 56, 56, 0.12);
+      
+        .accordion-header { 
+            border: none;
+            .accordion-button { 
+                font-size: 18px;
+                font-weight: 600;
+                color: $white;
+                border: 0;
+                border-radius: 8px;
+                box-shadow: none;
+                background-color: $theme-color;
+                padding: 20px;
+                text-transform: capitalize;
+    
+                &::after {
+                    content: "\2b";
+                    background: transparent;
+                    font-family: $fa;
+                    font-weight: 600;
+                    transition: all 0.3s ease-in-out !important;
+                    color: $header-color;
+                }
+                &:not(.collapsed)::after {
+                    content: "\f068";
+                    background: transparent;
+                    font-family: $fa;
+                    font-weight: 600;
+                    transform: rotate(0);
+                    color: $white;
+                }
+    
+                &.collapsed {
+                    background-color: transparent;
+                    padding: 20px 20px;
+                    color: $header-color;
+                }
+              
+            }
+        }
+    
+        .accordion-collapse { 
+            
+            .accordion-body {
+                padding-top: 15px;
+                color: #504E4E;
+                background: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.brand-wrapper {
+
+     .brand-image {
+         text-align: center;
+         filter: grayscale(100%);
+         @include transition;
+         opacity: .4;
+ 
+         &:hover {
+             filter: initial;
+             opacity: 1;
+         }
+     }
+ 
+     .swiper-slide.swiper-slide-active{
+         .brand-image {
+             filter: initial;
+             opacity: 1;
+         }
+     }
+
+     .content {
+        position: relative;
+
+        &::before {
+            @include before;
+            background: rgba(25, 35, 53, 0.20);
+            height: 1px;
+            top: 14px;
+            left: 16%;
+            width: 86%;
+
+            @include breakpoint (max-xl) {
+                display: none;
+            }
+        }
+
+        &.style-2 {
+            &::before {
+                @include before;
+                background: rgba(25, 35, 53, 0.20);
+                height: 1px;
+                top: 13px;
+                left: initial;
+                right: 21%;
+                width: 79%;
+
+                @include breakpoint (max-xl) {
+                    display: none;
+                }
+            }
+        }
+
+        p {
+            color: $header-color;
+            margin-bottom: 60px;
+            font-size: 18px;
+
+            @include breakpoint (max-xl) {
+                margin-bottom: 30px;
+            }
+
+            @include breakpoint (max-sm) {
+                display: none;
+             }
+        }
+
+        h6 {
+            margin-top: 60px;
+            font-size: 18px;
+            text-align: right;
+
+            @include breakpoint (max-xl) {
+                text-align: start;
+                margin-top: 30px;
+            }
+
+            @include breakpoint (max-sm) {
+                display: none;
+             }
+        }
+     }
+ }

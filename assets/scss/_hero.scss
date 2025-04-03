@@ -1,0 +1,386 @@
+.hero-1 {
+    padding: 80px 0;
+    position: relative;
+    z-index: 9;
+
+    .rain-shape {
+        position: absolute;
+        left: 190px;
+        top: 110px;
+
+        @include breakpoint (max-xxxl) {
+            display: none;
+        }
+    }
+
+    .book-shape {
+        position: absolute;
+        top: 20%;
+        left: 47%;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .sun-shape {
+        position: absolute;
+        top: 8%;
+        right: 12%;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .star-shape {
+        position: absolute;
+        left: 41%;
+        bottom: 6%;
+
+        @include breakpoint (max-xxl) {
+            display: none;
+        }
+    }
+
+    .right-shape {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .hero-content {
+
+        h6 {
+            margin-bottom: 25px;
+            text-transform: capitalize;
+            border-radius: 30px;
+            background: rgba(55, 88, 238, 0.10);
+            padding: 10px 24px;
+            line-height: 1;
+            display: inline-block;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            margin-top: 50px;
+            @include flex;
+            gap: 24px;
+
+            .video-btn {
+                width: 55px;
+                height: 55px;
+                line-height: 55px;
+                text-align: center;
+                border-radius: 100px;
+                background-color: transparent;
+                color: $theme-color;
+                display: inline-block;
+                text-align: center;
+                font-size: 18px;
+                border: 1px solid $header-color;
+            }
+        }
+    }
+
+    .hero-right {
+        @include flex;
+        gap: 30px;
+        margin-left: 50px;
+
+        @include breakpoint (max-xl) {
+           margin-left: 0;
+        }
+
+        .hero-image {
+
+            img  {
+                @include imgw;
+            }
+    
+            &.style-2 {
+                margin-top: 100px;
+            }
+
+            &.style-3 {
+                margin-top: -100px;
+            }
+        }
+    }
+}
+
+.hero-2 {
+    padding: 100px 0;
+    position: relative;
+
+    @include breakpoint (max-lg) {
+        padding: 80px 0;
+    }
+
+    .left-shape {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        @include breakpoint (max-xxxl) {
+            display: none;
+        }
+    }
+
+    .bottom-shape {
+        position: absolute;
+        left: 34%;
+        bottom: 8%;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .hero-content {
+
+        h6 {
+            margin-bottom: 25px;
+            text-transform: capitalize;
+            border-radius: 30px;
+            background: rgba(55, 88, 238, 0.10);
+            padding: 10px 24px;
+            line-height: 1;
+            display: inline-block;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+
+           span {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    bottom: 74px;
+                    left: 0;
+
+                    @include breakpoint (max-lg){
+                       display: none;
+                    }
+                }
+            }
+        }
+
+        .hero-button {
+            margin-top: 50px;
+        }
+    }
+
+    .hero-image {
+        position: relative;
+        z-index: 9;
+
+        &::before {
+            @include before;
+            border: 2px solid $theme-color;
+            width: 95%;
+            height: 96%;
+            top: -26px;
+            left: 60px;
+            z-index: -1;
+           border-radius: 18px 120px 18px 100px;
+
+            @include breakpoint(max-xl) {
+                display: none;
+            }
+        }
+
+        img {
+            @include imgw;
+            border-radius: 18px 100px;
+        }
+
+        .box-shape {
+            position: absolute;
+            bottom: 45px;
+            right: -80px;
+
+            @include breakpoint (max-xxxl) {
+                right: -40px;
+            }
+
+            @include breakpoint (max-xl) {
+                display: none;
+            }
+
+            img {
+                width: none;
+                height: none;
+                border-radius: 0;
+            }
+        }
+
+        .dot-shape {
+            position: absolute;
+            bottom: -40px;
+            left: -80px;
+            z-index: -1;
+
+            @include breakpoint (max-xl) {
+                display: none;
+            }
+
+            img {
+                width: none;
+                height: none;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+.hero-3 {
+    position: relative;
+
+    .pen-shape {
+        position: absolute;
+        top: 10%;
+        left: 42%;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .net-shape {
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+
+        @include breakpoint (max-xxxl) {
+            display: none;
+        }
+    }
+
+    .star-shape {
+        position: absolute;
+        bottom: 30%;
+        left: 44%;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .mask-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .hero-content {
+        padding: 120px 0 0;
+
+        @include breakpoint (max-xl) {
+            padding: 100px 0 80px;
+        }
+
+        @include breakpoint (max-lg) {
+            padding: 80px 0 40px;
+        }
+
+        @include breakpoint (max-md) {
+            text-align: center;
+        }
+
+        h6 {
+            margin-bottom: 25px;
+            text-transform: capitalize;
+            border-radius: 30px;
+            background: rgba(55, 88, 238, 0.10);
+            padding: 10px 24px;
+            line-height: 1;
+            display: inline-block;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+
+           span {
+              color: $theme-color;
+            }
+        }
+
+        .hero-button {
+            @include flex;
+            gap: 30px;
+            margin-top: 50px;
+
+            @include breakpoint (max-md){
+                margin-top: 40px;
+                justify-content: center;
+            }
+
+            @include breakpoint (max-sm){
+                margin-top: 25px;
+                flex-wrap: wrap;
+            }
+
+            .video-btn {
+                background-color: $theme-color;
+                color: $white;
+                display: inline-block;
+                font-size: 16px;
+                height:44px;
+                width: 44px;
+                line-height:44px;
+                border-radius: 50%;
+                text-align: center;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    right: 0;
+                    bottom: 0;
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    border: 1px solid $theme-color;
+                    content: "";
+                    transform: translate(-50%,-50%);
+                }
+            }
+
+            .button-text {
+                span {
+                    font-size: 18px;
+                    color: $header-color;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .hero-image {
+        margin-right: -50%;
+
+        @include breakpoint (max-xl) {
+           margin-right: 0;
+        }
+
+        img {
+            @include imgw;
+        }
+    }
+}
